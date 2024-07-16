@@ -5,4 +5,10 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - id: step1
-          run: echo "Test message succeeded"
+          run: |
+            echo "Test message"
+            cat > ./Dockerfile <<EOF
+            FROM alpine
+            CMD ["echo", "Hello container!"]
+            EOF
+            echo "Success"
