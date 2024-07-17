@@ -21,7 +21,7 @@ jobs:
             docker push ghcr.io/lkatalin/test-tag:latest
             echo "Success build-push"
         - name: install-cosign
-          uses: sigstore/cosign-installer@v3.5.0
+          uses: sigstore/cosign-installer@main
           with:
             cosign-release: 'v2.2.4'
         - name: check-cosign-install
