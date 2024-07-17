@@ -35,5 +35,5 @@ jobs:
             EOF
             docker build -t ghcr.io/lkatalin/test-signed:latest .
             docker push ghcr.io/lkatalin/test-signed:latest
-            cosign sign --yes ghcr.io/lkatalin/test-signed:latest
+            cosign sign -y ghcr.io/lkatalin/test-signed:latest
             echo "Success build-sign-push"
